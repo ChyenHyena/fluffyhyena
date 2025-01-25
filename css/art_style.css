@@ -1,0 +1,600 @@
+
+
+/*----------------------------------------------------------------------*/
+
+/* |||||ART||||| */
+
+/*GRID - ART*/
+
+.art {
+	color: black;
+	margin: 0 auto;
+	width: 100vw;
+	height: 100vh;
+	font-size: 0.85em;
+	background: #FEDDCB;
+	font-family: Arial;
+    display: grid;
+	justify-content: stretch;
+	align-content: stretch;
+    grid-template-columns: 40vw auto;
+    grid-template-rows: auto auto 328px;
+	grid-gap: 20px 40px;
+    grid-template-areas: 
+	"folders modal"
+	"folders modal" 
+	"footer footer" ;
+}
+
+.art-bg {
+	background: #FEDDCB fixed;
+	background-image: url("/images/mine/pixels/cityscape.gif");
+	background-repeat: repeat-x;
+	background-position: bottom;
+	width: 100%;
+	height: 100%;
+	grid-area: footer;
+	align-self: end;
+	z-index: -2;
+}
+
+.art .credits {
+    align-self: end;
+    margin: 0 auto 10px;
+    color: #13272b;
+	background-color: #feddcb;
+	border: 1px solid #c1d3c9;
+	outline: 1px solid #71a3a9;
+}
+
+.art .credits > a {
+	color: #4d4d4d;
+	font-weight: bold;
+
+}
+
+
+.art .credits > a:hover, .art .credits > a:focus {
+	color: #011db3;
+	border: 1px solid transparent;
+	background: none;
+
+}
+	
+.art-modal {
+	
+	grid-row-start: -4;
+	grid-row-end: -1;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	width: 80%;
+	height: 80vh;
+	align-self: end;
+	justify-self: center;
+	background: white border-box;
+	background-image: 
+	/*Corners*/
+	  url(/images/etc/assets/corner-tl.gif),
+	  url(/images/etc/assets/corner-tr.gif),
+	  url(/images/etc/assets/corner-br.gif),
+	  url(/images/etc/assets/corner-bl.gif),
+	  /*Corner Color*/
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  /*Laterals*/
+	  url(/images/etc/assets/border-x.gif), 
+	  url(/images/etc/assets/border-y.gif), 
+	  url(/images/etc/assets/border-x.gif), 
+	  url(/images/etc/assets/border-y.gif),
+	  /*Lateral Color*/
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  /*Menu*/
+	  url(/images/etc/assets/menu.gif), 
+	  url(/images/etc/assets/menu_2.gif), 
+	  /*Buttons*/
+	  url(/images/etc/assets/button-1.gif), 
+	  url(/images/etc/assets/button-2.gif), 
+	  /*Titlebar*/
+	  url(/images/etc/assets/titlebar.gif),
+	  /*Titlebar Color*/
+	  url(/images/etc/assets/titlebar-grey.gif),
+	  /*Scroll Arrows*/
+	  url(/images/etc/assets/arrow-l.gif),
+	  url(/images/etc/assets/arrow-r.gif),
+	  /*Scrollbar*/
+	  url(/images/etc/assets/scrollbar.gif);
+	  
+	  background-repeat:
+	  
+	  /*Corners*/
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  /*Corner Color*/
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  /*Laterals*/
+	  repeat-x,
+	  repeat-y,
+	  repeat-x,
+	  repeat-y,
+	  /*Lateral Color*/
+	  repeat-x,
+	  repeat-y,
+	  repeat-x,
+	  repeat-y,
+	  /*Menu*/
+	  no-repeat, 
+	  repeat-x, 
+	  /*Buttons*/
+	  no-repeat, 
+	  no-repeat, 
+	  /*Titlebar*/
+	  repeat-x,
+	  /*Titlebar Color*/
+	  repeat-x,
+	  /*Scroll Arrows*/
+	  no-repeat,
+	  no-repeat,
+	  /*Scrollbar*/
+	  repeat-x; 
+	  
+	  background-position: 
+  
+	  /*Corners*/
+	  top left,
+	  top right,
+	  bottom right,
+	  bottom left,
+	  /*Corner Color*/
+	  top left,
+	  top right,
+	  bottom right,
+	  bottom left,
+	  /*Laterals*/
+	  top,
+	  left,
+	  bottom,
+	  right,
+	  /*Lateral Color*/
+	  top,
+	  left,
+	  bottom,
+	  right,
+	  /*Menu*/
+	  left 4px top 23px, 
+	  left top 23px, 
+	  /*Buttons*/
+	  left 4px top 4px, 
+	  right 4px top 4px, 
+	  /*Titlebar*/
+	  left top 4px,
+	  /*Titlebar Color*/
+	  left top 4px,
+	  /*Scroll Arrows*/
+	  left 4px bottom 4px,
+	  right 4px bottom 4px,
+	  /*Scrollbar*/
+	  left bottom 4px;
+
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	overflow: hidden;
+	padding: 0 4px 62px;
+	margin: 0 0 50px;
+}
+
+.art-folders {
+	
+	grid-row-start: -4;
+	grid-row-end: -2;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	width: 250px;
+    height: 300px;
+	align-self: start;
+	justify-self: center;
+	background: white border-box;
+	background-image: 
+	/*Corners*/
+	  url(/images/etc/assets/corner-tl.gif),
+	  url(/images/etc/assets/corner-tr.gif),
+	  url(/images/etc/assets/corner-br.gif),
+	  url(/images/etc/assets/corner-bl.gif),
+	  /*Corner Color*/
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  /*Laterals*/
+	  url(/images/etc/assets/border-x.gif), 
+	  url(/images/etc/assets/border-y.gif), 
+	  url(/images/etc/assets/border-x.gif), 
+	  url(/images/etc/assets/border-y.gif),
+	  /*Lateral Color*/
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  /*Menu*/
+	  url(/images/etc/assets/menu.gif), 
+	  url(/images/etc/assets/menu_2.gif), 
+	  /*Buttons*/
+	  url(/images/etc/assets/button-1.gif), 
+	  url(/images/etc/assets/button-2.gif), 
+	  /*Titlebar*/
+	  url(/images/etc/assets/titlebar.gif),
+	  /*Titlebar Color*/
+	  url(/images/etc/assets/titlebar-grey.gif),
+	  /*Scroll Arrows*/
+	  url(/images/etc/assets/arrow-l.gif),
+	  url(/images/etc/assets/arrow-r.gif),
+	  /*Scrollbar*/
+	  url(/images/etc/assets/scrollbar.gif);
+	  
+	  background-repeat:
+	  
+	  /*Corners*/
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  /*Corner Color*/
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  /*Laterals*/
+	  repeat-x,
+	  repeat-y,
+	  repeat-x,
+	  repeat-y,
+	  /*Lateral Color*/
+	  repeat-x,
+	  repeat-y,
+	  repeat-x,
+	  repeat-y,
+	  /*Menu*/
+	  no-repeat, 
+	  repeat-x, 
+	  /*Buttons*/
+	  no-repeat, 
+	  no-repeat, 
+	  /*Titlebar*/
+	  repeat-x,
+	  /*Titlebar Color*/
+	  repeat-x,
+	  /*Scroll Arrows*/
+	  no-repeat,
+	  no-repeat,
+	  /*Scrollbar*/
+	  repeat-x; 
+	  
+	  background-position: 
+  
+	  /*Corners*/
+	  top left,
+	  top right,
+	  bottom right,
+	  bottom left,
+	  /*Corner Color*/
+	  top left,
+	  top right,
+	  bottom right,
+	  bottom left,
+	  /*Laterals*/
+	  top,
+	  left,
+	  bottom,
+	  right,
+	  /*Lateral Color*/
+	  top,
+	  left,
+	  bottom,
+	  right,
+	  /*Menu*/
+	  left 4px top 23px, 
+	  left top 23px, 
+	  /*Buttons*/
+	  left 4px top 4px, 
+	  right 4px top 4px, 
+	  /*Titlebar*/
+	  left top 4px,
+	  /*Titlebar Color*/
+	  left top 4px,
+	  /*Scroll Arrows*/
+	  left 4px bottom 4px,
+	  right 4px bottom 4px,
+	  /*Scrollbar*/
+	  left bottom 4px;
+
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	margin: 50px 0 0;
+	overflow: hidden;
+	padding: 0 4px 62px;
+}
+
+
+.art-options {
+	overflow-y: scroll;
+	height: 100%;
+	width: 100%;
+}
+
+.art h1 {
+	padding: 0 0 26px;
+}
+
+.art-thumbs {
+	
+	grid-row-start: -2;
+	grid-row-end: -1;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	justify-self: stretch;
+	background: white border-box;
+	background-image: 
+	/*Corners*/
+	  url(/images/etc/assets/corner-tl.gif),
+	  url(/images/etc/assets/corner-tr.gif),
+	  url(/images/etc/assets/corner-br.gif),
+	  url(/images/etc/assets/corner-bl.gif),
+	  /*Corner Color*/
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  /*Laterals*/
+	  url(/images/etc/assets/border-x.gif), 
+	  url(/images/etc/assets/border-y.gif), 
+	  url(/images/etc/assets/border-x.gif), 
+	  url(/images/etc/assets/border-y.gif),
+	  /*Lateral Color*/
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  url(/images/etc/assets/grey-border.gif),
+	  /*Menu*/
+	  url(/images/etc/assets/menu.gif), 
+	  url(/images/etc/assets/menu_2.gif), 
+	  /*Buttons*/
+	  url(/images/etc/assets/button-1.gif), 
+	  url(/images/etc/assets/button-2.gif), 
+	  /*Titlebar*/
+	  url(/images/etc/assets/titlebar.gif),
+	  /*Titlebar Color*/
+	  url(/images/etc/assets/titlebar-grey.gif),
+	  /*Scroll Arrows*/
+	  url(/images/etc/assets/arrow-l.gif),
+	  url(/images/etc/assets/arrow-r.gif),
+	  /*Scrollbar*/
+	  url(/images/etc/assets/scrollbar.gif);
+	  
+	  background-repeat:
+	  
+	  /*Corners*/
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  /*Corner Color*/
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  no-repeat,
+	  /*Laterals*/
+	  repeat-x,
+	  repeat-y,
+	  repeat-x,
+	  repeat-y,
+	  /*Lateral Color*/
+	  repeat-x,
+	  repeat-y,
+	  repeat-x,
+	  repeat-y,
+	  /*Menu*/
+	  no-repeat, 
+	  repeat-x, 
+	  /*Buttons*/
+	  no-repeat, 
+	  no-repeat, 
+	  /*Titlebar*/
+	  repeat-x,
+	  /*Titlebar Color*/
+	  repeat-x,
+	  /*Scroll Arrows*/
+	  no-repeat,
+	  no-repeat,
+	  /*Scrollbar*/
+	  repeat-x; 
+	  
+	  background-position: 
+  
+	  /*Corners*/
+	  top left,
+	  top right,
+	  bottom right,
+	  bottom left,
+	  /*Corner Color*/
+	  top left,
+	  top right,
+	  bottom right,
+	  bottom left,
+	  /*Laterals*/
+	  top,
+	  left,
+	  bottom,
+	  right,
+	  /*Lateral Color*/
+	  top,
+	  left,
+	  bottom,
+	  right,
+	  /*Menu*/
+	  left 4px top 23px, 
+	  left top 23px, 
+	  /*Buttons*/
+	  left 4px top 4px, 
+	  right 4px top 4px, 
+	  /*Titlebar*/
+	  left top 4px,
+	  /*Titlebar Color*/
+	  left top 4px,
+	  /*Scroll Arrows*/
+	  left 4px bottom 4px,
+	  right 4px bottom 4px,
+	  /*Scrollbar*/
+	  left bottom 4px;
+
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	overflow: hidden;
+	padding: 0 4px 62px;
+	margin: 0 0 50px 50px;
+}
+
+.thumb-holder {
+	border: none;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+.modal-frame {
+	border: none;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: 100%;
+	width: 100%;
+} 
+
+.art a {
+	outline: none;
+	text-decoration: none;
+	font-weight: normal;
+	color: black;
+	padding: 1px;
+}
+
+.art a:focus, .art a:hover {
+	background-color: #01F8F8;
+	border: 1px dotted red;
+	padding: 0;
+}
+
+.art dl {
+	position: relative;
+	display: inline-block;
+	padding: 0 20px;
+	
+}
+
+.art dt {
+	text-align: left;
+	margin: 0 5px 15px;
+}
+
+.art dt::before {
+	content: url(/images/etc/assets/separator_link.gif) " ";
+}
+
+.art dd {
+	text-align: left;
+	margin: 10px 10px 15px;
+}
+
+.art dd::before {
+	content: url(/images/etc/assets/separator.gif) " ";
+}
+
+.thumbs {
+	display: flex;
+}
+
+
+.art-thumb {
+	display: inline-block;
+	height: 100%;
+	max-width: unset;
+	margin: auto;
+}
+
+
+.frame {
+	display: flex;
+	height: 190px;
+	width: 100%;
+	margin: 5px;
+	line-height: 190px;
+}
+
+
+.frame p {
+	display: none;
+	padding: 10px;
+	margin: auto;
+	width: 150px;
+	line-height: 1.5;
+	vertical-align: middle;
+	color: #13272b;
+	background-color: #feddcb;
+	border: 1px dotted #71a3a9;
+	border-radius: 10px;
+}
+/*----------------------------------------------------------------------*/
+
+
+
+/* ||GENERAL DECO|| */
+
+
+/*Random Deco*/
+
+
+.buttons {
+	line-height: 1.5;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.blinky {
+	line-height: 1.5;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.mascot {
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	margin: 0 3% 2% 0;
+}
+
+#icon {
+  margin: 0 5% 0 0;
+}
+
+/*Images*/
+
+img {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+
+

@@ -1,0 +1,805 @@
+
+/*----------------------------------------------------------------------*/
+
+/* |||||STORAGE||||| */
+
+/*GRID - STORAGE*/
+
+
+.storage {
+	color: black;
+	margin: 0 auto;
+	font-size: 0.85em;
+	display: block;
+	background: #cbf5ff url("/images/mine/pixels/floppybg.gif") fixed repeat;
+	font-family: Arial;
+    display: grid;
+	justify-content: stretch;
+	align-content: stretch;
+    grid-template-columns: 400px 59% 250px;
+    grid-template-rows: 200px auto 100px;
+    grid-template-areas: 
+	"info title ."
+	"menu main ." 
+	". footer ." ;
+}
+
+.storage .menu {
+	position: fixed;
+	bottom: 0;
+	margin: auto auto 7% 9%;
+	display: grid;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 100px;
+	grid-gap: 20px 20px;
+	grid-template-areas:
+	"back_1"
+	"back_2"
+}
+
+.storage .info {
+  position: fixed;
+  max-width: 35vh;
+  margin: 10% auto auto 4%;
+  padding: 0 8px 35px;
+  background: white;
+  background-image: 
+  
+  /*Corners*/
+  url(/images/etc/assets/corner-tl.gif),
+  url(/images/etc/assets/corner-tr.gif),
+  url(/images/etc/assets/corner-br.gif),
+  url(/images/etc/assets/corner-bl.gif),
+  /*Corner Color*/
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  /*Laterals*/
+  url(/images/etc/assets/border-x.gif), 
+  url(/images/etc/assets/border-y.gif), 
+  url(/images/etc/assets/border-x.gif), 
+  url(/images/etc/assets/border-y.gif),
+  /*Lateral Color*/
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  /*Menu*/
+  url(/images/etc/assets/menu.gif), 
+  url(/images/etc/assets/menu_2.gif), 
+  /*Buttons*/
+  url(/images/etc/assets/button-1.gif), 
+  url(/images/etc/assets/button-2.gif), 
+  /*Titlebar*/
+  url(/images/etc/assets/titlebar.gif),
+  /*Titlebar Color*/
+  url(/images/etc/assets/titlebar-cyan.gif),
+  /*Scroll Arrows*/
+  url(/images/etc/assets/arrow-l.gif),
+  url(/images/etc/assets/arrow-r.gif),
+  /*Scrollbar*/
+  url(/images/etc/assets/scrollbar.gif);
+  
+  background-repeat:
+  
+  /*Corners*/
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  /*Corner Color*/
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  /*Laterals*/
+  repeat-x,
+  repeat-y,
+  repeat-x,
+  repeat-y,
+  /*Lateral Color*/
+  repeat-x,
+  repeat-y,
+  repeat-x,
+  repeat-y,
+  /*Menu*/
+  no-repeat, 
+  repeat-x, 
+  /*Buttons*/
+  no-repeat, 
+  no-repeat, 
+  /*Titlebar*/
+  repeat-x,
+  /*Titlebar Color*/
+  repeat-x,
+  /*Scroll Arrows*/
+  no-repeat,
+  no-repeat,
+  /*Scrollbar*/
+  repeat-x;
+  
+  background-position: 
+  
+  /*Corners*/
+  top left,
+  top right,
+  bottom right,
+  bottom left,
+  /*Corner Color*/
+  top left,
+  top right,
+  bottom right,
+  bottom left,
+  /*Laterals*/
+  top,
+  left,
+  bottom,
+  right,
+  /*Lateral Color*/
+  top,
+  left,
+  bottom,
+  right,
+  /*Menu*/
+  left 4px top 23px, 
+  left top 23px, 
+  /*Buttons*/
+  left 4px top 4px, 
+  right 4px top 4px, 
+  /*Titlebar*/
+  left top 4px,
+  /*Titlebar Color*/
+  left top 4px,
+  /*Scroll Arrows*/
+  left 4px bottom 4px,
+  right 4px bottom 4px,
+  /*Scrollbar*/
+  left bottom 4px;
+  
+  background-origin: border-box;
+}
+
+.storage .title {
+	grid-area: title;
+	justify-self: center;
+	align-self: center;
+}
+
+.storage .main-window {
+  background: #F8F880;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-image: 
+  
+  /*Corners*/
+  url(/images/etc/assets/corner-tl.gif),
+  url(/images/etc/assets/corner-tr.gif),
+  url(/images/etc/assets/corner-br.gif),
+  url(/images/etc/assets/corner-bl.gif),
+  /*Corner Color*/
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  /*Laterals*/
+  url(/images/etc/assets/border-x.gif), 
+  url(/images/etc/assets/border-y.gif), 
+  url(/images/etc/assets/border-x.gif), 
+  url(/images/etc/assets/border-y.gif),
+  /*Lateral Color*/
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  /*Menu*/
+  url(/images/etc/assets/menu.gif), 
+  url(/images/etc/assets/menu_2.gif), 
+  /*Buttons*/
+  url(/images/etc/assets/button-1.gif), 
+  url(/images/etc/assets/button-2.gif), 
+  /*Titlebar*/
+  url(/images/etc/assets/titlebar.gif),
+  /*Titlebar Color*/
+  url(/images/etc/assets/titlebar-cyan.gif),
+  /*Scroll Arrows*/
+  url(/images/etc/assets/arrow-l.gif),
+  url(/images/etc/assets/arrow-r.gif),
+  /*Scrollbar*/
+  url(/images/etc/assets/scrollbar.gif);
+  
+  background-repeat:
+  
+  /*Corners*/
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  /*Corner Color*/
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  /*Laterals*/
+  repeat-x,
+  repeat-y,
+  repeat-x,
+  repeat-y,
+  /*Lateral Color*/
+  repeat-x,
+  repeat-y,
+  repeat-x,
+  repeat-y,
+  /*Menu*/
+  no-repeat, 
+  repeat-x, 
+  /*Buttons*/
+  no-repeat, 
+  no-repeat, 
+  /*Titlebar*/
+  repeat-x,
+  /*Titlebar Color*/
+  repeat-x,
+  /*Scroll Arrows*/
+  no-repeat,
+  no-repeat,
+  /*Scrollbar*/
+  repeat-x;
+  
+  background-position: 
+  
+  /*Corners*/
+  top left,
+  top right,
+  bottom right,
+  bottom left,
+  /*Corner Color*/
+  top left,
+  top right,
+  bottom right,
+  bottom left,
+  /*Laterals*/
+  top,
+  left,
+  bottom,
+  right,
+  /*Lateral Color*/
+  top,
+  left,
+  bottom,
+  right,
+  /*Menu*/
+  left 4px top 23px, 
+  left top 23px, 
+  /*Buttons*/
+  left 4px top 4px, 
+  right 4px top 4px, 
+  /*Titlebar*/
+  left top 4px,
+  /*Titlebar Color*/
+  left top 4px,
+  /*Scroll Arrows*/
+  left 4px bottom 4px,
+  right 4px bottom 4px,
+  /*Scrollbar*/
+  left bottom 4px;
+  background-origin: border-box;
+  grid-area: main;
+  padding: 0 70px 50px 70px;
+}
+
+
+.storage .back_1 {
+	text-align: center;
+	grid-area: back_1;
+	align-self: start;
+	justify-self: stretch;
+}
+
+.storage .back_2 {
+	text-align: center;
+	grid-area: back_2;
+	align-self: end;
+	justify-self: stretch;
+}
+
+.storage .credits {
+	align-self: center;
+}
+
+
+/*Storage Nav Bar*/
+
+.storage ul.sidenav {
+   list-style-type: none;
+   bottom: 0;
+   margin: auto auto 3% 8%;
+   padding: 64px 0 0 0;
+   width: 180px;
+   position: fixed;
+   overflow: auto;
+   background: none;
+}
+
+.storage ul.sidenav li a {
+  display: block;
+  font-family: 'Press Start 2P';
+  font-size: 0.96em;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  width: inherit;
+  padding: 6px 14px;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 2%;
+  background-color: white;
+} 
+
+.storage ul.sidenav li .active {
+  background-color: #0000AA;
+  color: white;
+  border: 2px solid white;
+}
+
+.storage ul.sidenav li a:hover:not(.active) {
+  filter: invert(100%);
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+
+
+/*Storage Text*/
+
+
+.storage a {
+	outline: none;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	padding: 1px;
+}
+
+.storage a:focus, .storage a:hover {
+	background-color: #01F8F8;
+	border: 1px dotted red;
+	padding: 0;
+}
+
+.storage a.back {
+	display: block;
+	padding: 4px 2px 2px 2px;
+	background-color: #80f8c0;
+	font-size: 0.9em;
+	font-weight: normal;
+	border: 1px solid transparent;
+}
+
+.storage a.back:focus, .storage a.back:hover {
+	border: 1px dotted red;
+	background-color: #01F8F8;
+}
+
+.storage a.front-page {
+	display: block;
+	padding: 5px;
+}
+
+.storage a.front-page:focus, .storage a.front-page:hover {
+	border: 1px dotted red;
+	background-color: #01F8F8;
+	padding: 4px;
+}
+
+.storage p {
+	position: relative;
+	display: inline-block;
+	margin: 40px 25px 0;
+}
+
+.storage p.description {
+	margin: 2px 10px 10px;
+}
+
+.storage dl {
+	position: relative;
+	display: inline-block;
+	margin: 30px 40px 5px;
+}
+
+.storage dt {
+	text-align: left;
+	margin: 20px 5px 15px;
+}
+
+.storage dt::before {
+	content: url(/images/etc/assets/separator_link.gif) " ";
+}
+
+.storage dd {
+	text-align: left;
+	margin: 10px 10px 15px;
+}
+
+.storage dd::before {
+	content: url(/images/etc/assets/separator.gif) " ";
+}
+
+.storage .credits > a {
+	color: #c11b62;
+
+}
+
+.storage .credits > a:hover, .storage .credits > a:focus {
+	color: black;
+
+}
+
+
+
+/*Storage Headers*/
+
+.storage header {
+	font-family: 'Lazer 84';
+	color: rgb(255,113,206);
+	font-size: 500%;
+	text-align: center;
+	text-shadow: -2px -2px rgb(255, 255, 225), 
+	4px 4px rgb(34, 11, 56), 
+	7px 7px rgb(1,205,254);
+	letter-spacing: 8px;
+	word-spacing: 15px;
+	display:inline-block;
+	margin: auto;
+}
+
+
+.storage h1, .art h1 {
+	font-size: 1em;
+	font-family: Arial;
+	top: 5px;
+	text-align: center;
+	position: relative;
+	margin: 0;
+	display: block;
+	text-transform: initial;
+}
+
+.storage h2 {
+	font-size: 1em;
+	font-family: Arial;
+	top: 5px;
+	text-align: center;
+	position: relative;
+	margin: 0;
+}
+
+.storage h3 {
+	border-bottom: 1px dotted black;
+}
+
+.storage h3:focus, .storage h3:hover {
+	border-bottom: 1px solid transparent;
+}
+
+.storage .separator {
+	display: block;
+	font-size: 1em;
+	font-family: Arial;
+	text-align: left;
+	position: relative;
+	margin: 15px 2px;
+	text-indent: 10px;
+	border-bottom: 2px dashed black;
+}
+
+.storage .main-links {
+	position: relative;
+	margin: 50px 20px 0;
+	display: block;
+}
+
+/*Storage Articles*/
+
+
+.storage .sub-window {
+  background: white;
+  padding: 0 15px 25px 15px;
+  background-image: 
+  
+  /*Corners*/
+  url(/images/etc/assets/corner-tl.gif),
+  url(/images/etc/assets/corner-tr.gif),
+  url(/images/etc/assets/corner-br.gif),
+  url(/images/etc/assets/corner-bl.gif),
+  /*Corner Color*/
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  /*Laterals*/
+  url(/images/etc/assets/border-x.gif), 
+  url(/images/etc/assets/border-y.gif), 
+  url(/images/etc/assets/border-x.gif), 
+  url(/images/etc/assets/border-y.gif),
+  /*Lateral Color*/
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  url(/images/etc/assets/pink-border.gif),
+  /*Menu*/
+  url(/images/etc/assets/menu.gif), 
+  url(/images/etc/assets/menu_2.gif), 
+  /*Buttons*/
+  url(/images/etc/assets/button-1.gif), 
+  url(/images/etc/assets/button-2.gif), 
+  /*Titlebar*/
+  url(/images/etc/assets/titlebar.gif),
+  /*Titlebar Color*/
+  url(/images/etc/assets/titlebar-cyan.gif),
+  /*Scroll Arrows*/
+  url(/images/etc/assets/arrow-l.gif),
+  url(/images/etc/assets/arrow-r.gif),
+  /*Scrollbar*/
+  url(/images/etc/assets/scrollbar.gif);
+  
+  background-repeat:
+  
+  /*Corners*/
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  /*Corner Color*/
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  no-repeat,
+  /*Laterals*/
+  repeat-x,
+  repeat-y,
+  repeat-x,
+  repeat-y,
+  /*Lateral Color*/
+  repeat-x,
+  repeat-y,
+  repeat-x,
+  repeat-y,
+  /*Menu*/
+  no-repeat, 
+  repeat-x, 
+  /*Buttons*/
+  no-repeat, 
+  no-repeat, 
+  /*Titlebar*/
+  repeat-x,
+  /*Titlebar Color*/
+  repeat-x,
+  /*Scroll Arrows*/
+  no-repeat,
+  no-repeat,
+  /*Scrollbar*/
+  repeat-x;
+  
+  background-position: 
+  
+  /*Corners*/
+  top left,
+  top right,
+  bottom right,
+  bottom left,
+  /*Corner Color*/
+  top left,
+  top right,
+  bottom right,
+  bottom left,
+  /*Laterals*/
+  top,
+  left,
+  bottom,
+  right,
+  /*Lateral Color*/
+  top,
+  left,
+  bottom,
+  right,
+  /*Menu*/
+  left 4px top 23px, 
+  left top 23px, 
+  /*Buttons*/
+  left 4px top 4px, 
+  right 4px top 4px, 
+  /*Titlebar*/
+  left top 4px,
+  /*Titlebar Color*/
+  left top 4px,
+  /*Scroll Arrows*/
+  left 4px bottom 4px,
+  right 4px bottom 4px,
+  /*Scrollbar*/
+  left bottom 4px;
+  background-origin: border-box;
+  margin: 2% 7% 2% 7%;
+}
+
+#lists {
+	background: #09010d url(/images/mine/pixels/darkstars.gif) fixed repeat;
+	grid-gap: 40px 0;
+	grid-template-rows: 200px auto 40px;
+}
+
+.storage .list-flex {
+	display: flex;
+	flex-flow: column wrap;
+	max-height: 70vw;
+	margin: 25px 4px 20px;
+	overflow: scroll;
+	padding: 20px;
+}
+
+.list-flex dd:first-child::before {
+	content: url(/images/etc/assets/separator_link.gif) " ";
+}
+
+#lists .sub-window {
+	grid-area: main;
+	overflow: hidden;
+	padding: 0;
+}
+
+#lists h1 {
+	color: white;
+	font-size: 2em;
+	grid-area: title;
+	align-self: start;
+	margin: 70px auto auto;
+	font-family: 'Press Start 2P';
+	text-shadow: 2px 2px #df0f84, 4px 4px #0087ff;
+}
+
+#lists h2 {
+	grid-area: title;
+	align-self: end;
+	
+}
+
+#lists h2 > a {
+	color: #fff1cf;
+	margin: auto auto 50px;
+	font-size: 1.3em;
+	text-shadow: 2px 2px #bb2395;
+}
+
+#lists h2 > a:hover, #lists h2 > a:focus {
+	color: #08060d;
+	text-shadow: 2px 2px #53c7ff;
+}
+
+#lists h3 {
+	font-size: 1em;
+	font-family: Arial;
+	top: 5px;
+	text-align: center;
+	position: relative;
+	margin: 0;
+	display: block;
+	text-transform: initial;
+}
+
+#lists .credits{
+	align-self: start;
+	color: white;
+
+}
+
+#lists .credits > a {
+	color: #fff1cf;
+
+}
+
+#lists .credits > a:hover, #lists .credits > a:focus {
+	color: black;
+}
+
+
+/* ||DECO */
+
+
+/*Storage - Random Deco*/
+
+
+.storage .buttons {
+	margin: auto;
+}
+
+.storage .mascot {
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	margin: 0 2% 2% 0;
+}
+
+.storage #icon {
+  margin: 0 5% 0 0;
+}
+
+/*Storage Images*/
+
+.storage img {
+	margin: 0;
+	padding: 0;
+}
+
+.storage .image-flex-big {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.storage .image-flex-small {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 28px;
+  position: relative;
+  justify-content: center;
+  align-items: end;
+
+}
+
+
+
+.storage .image-flex-elements {
+  max-height: 150px;
+}
+
+/*----------------------------------------------------------------------*/
+
+
+
+/* ||GENERAL DECO|| */
+
+
+/*Random Deco*/
+
+
+.buttons {
+	line-height: 1.5;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.blinky {
+	line-height: 1.5;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.mascot {
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	margin: 0 3% 2% 0;
+}
+
+#icon {
+  margin: 0 5% 0 0;
+}
+
+/*Images*/
+
+img {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+
+

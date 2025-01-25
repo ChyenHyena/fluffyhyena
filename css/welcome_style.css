@@ -1,0 +1,232 @@
+@font-face{
+    font-family: "Lazer 84";
+    src: url('/fonts/LAZER 84/Lazer84.ttf');
+}
+
+@font-face{
+    font-family: "Press Start 2P";
+    src: url('/fonts/Press Start 2P/PressStart2P.ttf');
+}
+
+/*----------------------------------------------------------------------*/
+
+/* |||||WELCOME||||| */
+
+/*GRID - WELCOME*/
+
+.welcome {
+    display: grid;
+	background: #b9a1b0 url("/images/mine/pixels/pinkstarsky.gif") fixed repeat;
+    grid-template-columns: auto 400px auto;
+    grid-template-rows: 20vh 250px 250px 30px;
+    grid-template-areas: 
+	"space space space" 
+	"changelog main image" 
+	"webring main image" 
+	". footer .";
+	font-size: initial;
+}
+
+.changelog {
+	grid-area: changelog;
+	justify-self: end;
+	align-self: start;
+	margin: auto 35px;
+}
+
+.welcome-button {
+	grid-area: webring;
+	justify-self: end;
+	align-self: end;
+	margin: auto 90px;
+	padding: 2% 50px;
+}
+
+.welcome-box {
+	grid-area: main;
+	justify-self: stretch;
+	align-self: stretch;
+	display: grid;
+	padding: 2%;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: auto;
+	grid-template-areas:
+	"main main main main"
+	"footer footer footer footer"
+}
+
+.welcome-link {
+	grid-area: main;
+	justify-self: stretch;
+	align-self: end;
+}
+
+.welcome-text {
+	grid-area: footer;
+	justify-self: center;
+	align-self: center;
+}
+
+.welcome-rating {
+	grid-area: footer;
+	justify-self: center;
+	align-self: end;
+	margin: 10px;
+}
+
+.welcome-image {
+	grid-area: image;
+	justify-self: start;
+	align-self: center;
+	margin: auto 35px;
+}
+
+.welcome .credits{
+	grid-area: footer;
+	justify-self: center;
+	align-self: end;
+	text-align: center;
+	color: rgb(34, 11, 56);
+	display: inline-block;
+	padding:  0;
+	font-weight: bold;
+	font-size: 0.78em;
+}
+
+/*Welcome Body*/
+
+.welcome body {
+	margin: 0 auto;
+	display: block;
+	font-family: Arial;
+}
+
+.welcome article {
+  background: #866c89 url("/images/mine/pixels/spacecloudsbg.gif") fixed repeat;
+  text-align: center;
+  border: 3px solid rgb(255, 255, 230);
+  box-shadow: 6px 6px rgb(255,113,206), -6px -6px rgb(1,205,254), 6px 6px 3px rgb(255,113,206), -6px -6px 3px rgb(1,205,254);
+  border-radius: 30px;
+}
+
+.welcome embed {
+	margin: 3px;
+}
+
+
+/*Welcome Text*/
+
+.welcome main {
+	padding: 0 0 4% 13%;
+	font-family: Arial;
+}
+
+.welcome h1 {
+	font-family: 'Lazer 84';
+	color: rgb(255,113,206);
+	font-size: 500%;
+	padding: 1% 0 1% 0.5%;
+	text-align: center;
+	text-shadow: -2px -2px rgb(255, 255, 225), 
+	4px 4px rgb(34, 11, 56), 
+	7px 7px rgb(1,205,254);
+	box-shadow: 0 2px rgb(255, 255, 225), 
+	0 4px rgb(255,113,206), 
+	0 6px rgb(34, 11, 56),
+	0 8px rgb(1,205,254);
+	display:inline-block;
+	margin: auto;
+}
+
+.welcome h1:hover, .welcome h1:focus {
+	color: rgb(255, 204, 224);
+	text-shadow: -2px -2px rgb(255, 255, 230), 
+	4px 4px rgb(255, 77, 148), 
+	7px 7px rgb(0, 77, 230);
+	box-shadow: 0 2px rgb(255, 255, 230), 
+	0 4px rgb(255, 204, 224),
+	0 6px rgb(255, 77, 148), 
+	0 8px rgb(0, 77, 230);
+}
+
+
+
+.welcome p { 
+	text-align: center;
+	color: white;
+	text-shadow: -1px -1px 10px rgba(48, 29, 48, 0.4), 1px 1px rgb(48, 29, 48);
+	display: inline-block;
+	padding:  0;
+	font-weight: normal;
+}
+
+.welcome a {
+	text-decoration: none;
+	font-weight: inherit;
+	color: #00ffff;
+	text-shadow: -1px -1px 10px rgba(48, 29, 48, 0.4), 1px 1px #5c0819;
+	
+}
+
+.welcome a:hover, .welcome a:focus{
+	color: #ffecdb;
+	text-shadow: -1px -1px 10px rgba(48, 29, 48, 0.4), 1px 1px rgb(48, 29, 48);
+	outline: none;
+}
+
+
+.welcome img {
+	max-width: initial;
+}
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------*/
+
+
+
+/* ||GENERAL DECO|| */
+
+
+/*Random Deco*/
+
+
+.buttons {
+	line-height: 1.5;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.blinky {
+	line-height: 1.5;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.mascot {
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	margin: 0 3% 2% 0;
+}
+
+#icon {
+  margin: 0 5% 0 0;
+}
+
+/*Images*/
+
+img {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+
+
