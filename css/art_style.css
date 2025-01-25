@@ -1,4 +1,12 @@
+@font-face{
+    font-family: "Lazer 84";
+    src: url('/fonts/LAZER 84/Lazer84.ttf');
+}
 
+@font-face{
+    font-family: "Press Start 2P";
+    src: url('/fonts/Press Start 2P/PressStart2P.ttf');
+}
 
 /*----------------------------------------------------------------------*/
 
@@ -587,14 +595,6 @@
   margin: 0 5% 0 0;
 }
 
-/*Images*/
-
-img {
-	margin: 0;
-	padding: 0;
-	max-width: 100%;
-	height: auto;
-}
 
 
 
