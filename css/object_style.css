@@ -1,0 +1,93 @@
+@font-face{
+    font-family: "Press Start 2P";
+    src: url('/fonts/Press Start 2P/PressStart2P.ttf');
+}
+	
+	body#main {
+	background: #ff7daa url("/images/big_bg/shadowruncity.gif") repeat-x fixed left bottom;
+	}
+	
+	h1 {
+	font-family: 'Press Start 2P';
+	color: #330033;
+	margin: 3% auto 0 3%;
+	font-size: 2em;
+	text-transform: uppercase;
+	text-shadow: 2px 2px #ffccff;
+	}
+	
+	article {
+	background-color: white;
+	outline: 1px dashed white;
+	margin: 3% 40% 0 0;
+	padding: 1%;
+	display: block;
+	}
+	
+	embed {
+		width:100%;
+	}
+	
+	h3 {
+	font-family: 'Press Start 2P';
+	color: rgb(34, 11, 56);
+	font-size: 0.85em;
+	}
+	
+	li, p {
+	font-family: Arial;
+	margin: auto;
+	color: rgb(34, 11, 56);
+	padding: 1%;
+	font-size: 0.99em;
+	}
+	
+	.log {
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 0 5px;
+	border-radius: 30px;
+	}
+	
+	a {
+	text-decoration: none;
+	color: #e6005c;
+	}
+
+	a:hover, a:focus {
+	outline: none;
+	color: #ff3385;
+	}
+	
+	#back {
+	display: inline-block;
+	z-index: 1;
+	position: relative;
+	margin: 0 2% 0 auto;
+	}
+	
+
+	.anim img:hover{
+	bottom: 6px;
+	}
+	
+@media only screen and (max-width: 680px){
+	
+	article {
+		margin: 3% auto;
+		padding: 2%;
+		
+	}
+}
+  
+@media only screen and (orientation: portrait){
+	
+	article {
+		margin: 3% auto;
+		padding: 2%;
+	}
+	
+	h1 {
+		margin: 3% auto;
+		text-align: center;
+	}
+}
