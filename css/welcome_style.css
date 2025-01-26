@@ -16,6 +16,8 @@
 
 .welcome {
     display: grid;
+	font-size: 0.85em;
+	font-family: 'Arial';
 	background: #b9a1b0 url("/images/mine/pixels/pinkstarsky.gif") fixed repeat;
     grid-template-columns: auto 400px auto;
     grid-template-rows: 20vh 250px 250px 30px;
@@ -99,6 +101,7 @@
 	margin: 0 auto;
 	display: block;
 	font-family: Arial;
+	font-size: 0.85em;
 }
 
 .welcome article {

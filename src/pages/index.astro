@@ -1,11 +1,11 @@
 ---
-
+import Credits from '../components/credits.astro';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/images/etc/small/paw-prints.ico" type="image/x-icon">
+		<link rel="icon" href="/paw-prints.ico" type="image/x-icon">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Old-School Hyena</title>
@@ -46,7 +46,7 @@
 			   <img src="/images/mine/pixels/me.gif" alt="Hyena">
 		   </div>
 		   
-		   <footer class="credits">Version 1.12 | <a href="/credits.html">Credits</a></footer>
+		  <Credits />
    
 	 </body>
    </html>

@@ -1,0 +1,161 @@
+---
+import Navigation from '../../components/navigation.astro';
+import BlinkyHolder from '../../components/blinky-holder.astro';
+import StampHolder from '../../components/stamp-holder.astro';
+import Credits from '../../components/credits.astro';
+import "/css/home_style.css";
+
+const Stamps = {
+	stampOne: '/images/etc/codes/fluffyhyena.gif',
+	stampTwo: '/images/etc/buttons/notepadpp.gif',
+ 	stampThree: '/images/etc/buttons/neocities_button.gif',
+}
+
+const Blinkies = {
+	blinkyOne: '/images/etc/blinks/urhere.gif',
+ 	blinkyTwo: '/images/etc/blinks/Pink.gif',
+ 	blinkyThree: '/images/etc/blinks/anime.gif',
+ 	blinkyFour: '/images/etc/blinks/computer_nerd.gif',
+ }
+
+const AboutMe = {
+	name: "Hyena",
+	interests: ["full-time illustration student", "full-time illustration graduate", "part-time all-around nerd", "retro enthusiast."],
+}
+const Student = true;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/public/paw-prints.ico" type="image/x-icon">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+    <title>Old-School Hyena</title>
+    <link rel="icon" href="/paw-prints.ico" type="image/x-icon">
+
+  </head>
+  
+  <body class="home-main" onresize="unHide()">
+  <!-- Navigation Bar -->
+
+ 		<Navigation />
+
+        <!-- Buttons -->
+
+		<StampHolder>
+			<a href="https://neocities.org/site/fluffyhyena" target="_blank"><img src={Stamps.stampOne} alt="Website button"></a>
+			<img src={Stamps.stampTwo} alt="'Notepad++' button"/>
+			<img  src={Stamps.stampThree} alt="Neocities button">
+		</StampHolder>
+      <!-- Headers -->
+	  
+		<header class="title">Old-School Hyena</header>
+		<br>
+		<h1>New and Improved!</h1>
+		<br>
+	  
+		<main class="main-window">
+			
+			
+			  <article class="sub-window">
+			  
+			  <h2>Program Manager</h2>
+			  
+				<p class="intro">Welcome, internauts! I'm {AboutMe.name}, {Student === true ? AboutMe.interests[0] : AboutMe.interests[1]}, 
+				{AboutMe.interests[2]} and {AboutMe.interests[3]}. 
+				This site contains some of my work, plus any cool stuff I can find around — links, gifs, music, etc.. 
+				<br>
+				<br>
+				Feel free to browse around, and if you feel like it maybe drop me a message! 
+				Site is always being added to so keep an eye out for <a href="/changelog/index.html">changelog updates!</a></p>
+				
+			  </article>
+				
+				<article class="sub-window">
+				
+				<h2>Images</h2>
+				  
+				  <div class="main-links">
+				  
+					<h3><a class="front-page" href="/art/">Art</a></h3>
+				  
+					<p>My art! You can browse either Original pieces or Fanart. You can also check  <a class="links" href="/art/commission-examples/" title="Link to commission info"> my commission info here!</a></p>
+				</div>
+					 
+				</article>
+				
+				<article class="sub-window">
+				
+				<h2>Text</h2>
+				  
+				<div class="main-links">
+				  
+					<h3><a class="front-page" href="/blog/">Blog</a></h3>
+						
+					<p>A journal of sorts! Still under construction.</p>
+				</div>
+				  
+				</article>
+				
+				<article class="sub-window">
+				
+				<h2>Files</h2>
+				  
+				<div class="main-links">
+				  
+					<h3><a class="front-page" href="/storage/">Storage</a></h3>
+					<p>Help yourself to a collection of random stuff! Like Images! And Links!</p>
+				  
+				</div>
+				  
+				</article>
+				
+				<article class="sub-window">
+				
+				<h2>Contacts</h2>
+				  
+				<div class="main-links">
+				  
+					<h3><a class="front-page" href="http://users2.smartgb.com/g/g.php?a=s&amp;i=g26-36470-b6">Guestbook</a></h3>
+					<p>Wanna leave a comment? This is the place for that!</p>
+						
+				</div>
+				  
+				</article>
+				
+				<article class="sub-window">
+				
+				<h2>User</h2>
+				  
+				<div class="main-links">
+				  
+					<h3><a class="front-page" href="/about.html">About</a></h3>
+					<p>About me! Pretty self-explainatory.</p>
+						
+				</div>
+				  
+				</article>
+				  
+			
+		</main>
+		
+		<!-- Blinkies -->
+		  
+		<BlinkyHolder>
+			<img src={Blinkies.blinkyOne}  alt="'Ur Here' blinky">
+        	<img src={Blinkies.blinkyTwo}  alt="'Pink Addict' blinky"/>
+        	<img src={Blinkies.blinkyThree}  alt="'Anime' blinky"/>
+        	<img src={Blinkies.blinkyFour} alt="'Computer Nerd' blinky"/>
+		</BlinkyHolder>
+	
+	<!-- Mascot -->
+	
+    <img class="mascot" src="/images/etc/large/dino.gif" alt="Dancing T-Rex" width="100px">
+	
+	<!-- Footer -->
+	
+	<Credits />
+
+  </body>
+</html>

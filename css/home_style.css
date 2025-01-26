@@ -18,14 +18,14 @@
 
 .home-main {
     display: grid;
-	background: #b9a1b0 url("/images/mine/pixels/pinkstarsky.gif") fixed repeat;
+	  background: #b9a1b0 url("/images/mine/pixels/pinkstarsky.gif") fixed repeat;
     grid-template-columns: 27% 825px auto;
     grid-template-rows: 250px 50px auto 50px;
-	grid-gap: 40px 0;
+	  grid-gap: 40px 0;
     grid-template-areas: 
 	"info title ."
-	". subtitle ."
-	"menu main ." 
+	"menu subtitle ."
+	". main ." 
 	". footer ." ;
 }
 
@@ -51,6 +51,11 @@
 }
 
 /*Home Navbar*/
+
+
+nav {
+  grid-area:info;
+}
 
 ul.sidenav {
   position: fixed;
